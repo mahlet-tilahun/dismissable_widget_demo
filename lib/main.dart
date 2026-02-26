@@ -52,9 +52,25 @@ class _TodoListState extends State<TodoList> {
               child: const Icon(Icons.delete, color: Colors.white),
             ),
             onDismissed: (direction) {
+              final removedTask = task;
+
               setState(() {
                 tasks.removeAt(index);
               });
+
+              ScaffoldMessenger.of(context).showSnackBar(
+                SnackBar(
+                  content: Text('$removedTask removed'),
+                  action: SnackBarAction(
+                    label: 'Undo',
+                    onPressed: () {
+                      setState(() {
+                        tasks.insert(index, removedTask);
+                      });
+                    },
+                  ),
+                ),
+              );
             },
             child: ListTile(
               leading: const Icon(Icons.check_circle_outline),
