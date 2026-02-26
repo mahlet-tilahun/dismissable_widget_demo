@@ -82,3 +82,8 @@ background: Container(
 - The `secondaryBackground` sets different properties like color for when the widget is swiped in a different direction.
 
 ## Screenshots
+
+<img src="image.png" alt="Screenshot 1" width="300"/>
+<img src="image-4.png" alt="Screenshot 2" width="300"/>
+<img src="image-2.png" alt="Screenshot 3" width="300"/>
+<img src="image-3.png" alt="Screenshot 4" width="300"/>
