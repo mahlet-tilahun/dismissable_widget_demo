@@ -109,7 +109,6 @@ background: Container(
 
 - The `secondaryBackground` sets different properties like color for when the widget is swiped in a different direction.
 
-## Screenshots
 
 ## Screenshots
 
