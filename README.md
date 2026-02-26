@@ -111,26 +111,27 @@ background: Container(
 
 ## Screenshots
 
-<div style="display: flex; flex-wrap: wrap; gap: 20px; justify-content: center;">
+## Screenshots
 
-  <figure>
-    <img src="screenshots/image.png" alt="Screenshot 1" width="250"/>
-    <figcaption align="center">Initial Task List View</figcaption>
-  </figure>
-
-  <figure>
-    <img src="screenshots/image-4.png" alt="Screenshot 2" width="250"/>
-    <figcaption align="center">Swiping left to Delete</figcaption>
-  </figure>
-
-  <figure>
-    <img src="screenshots/image-2.png" alt="Screenshot 3" width="250"/>
-    <figcaption align="center">Undo SnackBar</figcaption>
-  </figure>
-
-  <figure>
-    <img src="screenshots/image-3.png" alt="Screenshot 4" width="250"/>
-    <figcaption align="center">Swiping right showing a different colors</figcaption>
-  </figure>
-
-</div>
+<table>
+  <tr>
+    <td align="center">
+      <img src="screenshots/image.png" width="250"/><br>
+      Initial Task List View
+    </td>
+    <td align="center">
+      <img src="screenshots/image-4.png" width="250"/><br>
+      Swiping left to Delete
+    </td>
+  </tr>
+  <tr>
+    <td align="center">
+      <img src="screenshots/image-2.png" width="250"/><br>
+      Undo SnackBar
+    </td>
+    <td align="center">
+      <img src="screenshots/image-3.png" width="250"/><br>
+      Swiping right shows secondary color
+    </td>
+  </tr>
+</table>
