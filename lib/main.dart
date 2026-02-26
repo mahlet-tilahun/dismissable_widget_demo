@@ -14,19 +14,24 @@ class MyApp extends StatelessWidget {
   }
 }
 
-class TodoList extends StatelessWidget {
+class TodoList extends StatefulWidget {
   const TodoList({super.key});
 
   @override
-  Widget build(BuildContext context) {
-    final List<String> tasks = [
-      'Buy groceries',
-      'Reply to emails',
-      'Study for quiz',
-      'Read 10 pages',
-      'Exercise',
-    ];
+  State<TodoList> createState() => _TodoListState();
+}
 
+class _TodoListState extends State<TodoList> {
+  final List<String> tasks = [
+    'Buy groceries',
+    'Reply to emails',
+    'Study for quiz',
+    'Read 10 pages',
+    'Exercise',
+  ];
+
+  @override
+  Widget build(BuildContext context) {
     return Scaffold(
       appBar: AppBar(
         title: const Text('My Tasks'),
@@ -35,9 +40,26 @@ class TodoList extends StatelessWidget {
       body: ListView.builder(
         itemCount: tasks.length,
         itemBuilder: (context, index) {
-          return ListTile(
-            leading: const Icon(Icons.check_circle_outline),
-            title: Text(tasks[index]),
+          final task = tasks[index];
+
+          return Dismissible(
+            key: Key(task),
+            direction: DismissDirection.horizontal,
+            background: Container(
+              color: Colors.blue,
+              alignment: Alignment.centerRight,
+              padding: const EdgeInsets.only(right: 20),
+              child: const Icon(Icons.delete, color: Colors.white),
+            ),
+            onDismissed: (direction) {
+              setState(() {
+                tasks.removeAt(index);
+              });
+            },
+            child: ListTile(
+              leading: const Icon(Icons.check_circle_outline),
+              title: Text(task),
+            ),
           );
         },
       ),
